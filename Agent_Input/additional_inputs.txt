@@ -1,0 +1,46 @@
+Completeness Checks:
+Verify the output includes analysis of the Oracle implementation.
+Verify every required section from the orc-sf-kb knowledge base is present.
+Verify dependencies are explicitly identified.
+Verify migration impacts are explicitly identified.
+Verify metadata structure is preserved throughout the output.
+Verify the output follows enterprise formatting consistently.
+Verify API cost information is present at the end of the output.
+Verify all provided input content is addressed in the analysis.
+Verify section headings are present and consistently formatted.
+Verify no required KB-driven section is omitted.
+Verify the output is fully structured and not truncated.
+Verify dependency mappings include all referenced Oracle components.
+Verify migration impact analysis includes affected systems, integrations, or modules if referenced in the input.
+Verify all mandatory output sections defined by the KB are included.
+
+Accuracy Checks:
+Verify Oracle implementation details are correctly interpreted from the input.
+Verify dependencies identified in the output match the source implementation details.
+Verify migration impacts are directly supported by evidence from the input or KB.
+Verify no undocumented assumptions are introduced.
+Verify metadata fields preserve original naming and hierarchy.
+Verify enterprise formatting is consistently applied without structural deviations.
+Verify KB guidance is correctly followed for each section.
+Verify API cost is placed only at the end of the output.
+Verify dependency relationships are logically correct.
+Verify migration impact statements do not contradict source data.
+Verify all terminology is consistent with Oracle migration context.
+Verify no hallucinated systems, integrations, APIs, or dependencies are added.
+Verify section content aligns with its corresponding heading.
+Verify deterministic formatting is maintained across repeated structures.
+Verify output values and mappings are internally consistent.
+
+Efficiency Checks:
+Verify no duplicate sections exist in the output.
+Verify dependency analysis is not repeated across multiple sections unnecessarily.
+Verify migration impact descriptions are concise and non-redundant.
+Verify metadata structures are reused consistently instead of reformatted differently across sections.
+Verify enterprise formatting is consistent without excessive verbosity.
+Verify repeated Oracle component descriptions are consolidated where applicable.
+Verify API cost is reported only once at the end.
+Verify tables or structured sections are not duplicated.
+Verify headings and formatting patterns remain uniform throughout the document.
+Verify no unnecessary explanatory text outside required enterprise reporting structure is included.
+Verify repeated KB guidance text is not copied into the final output unnecessarily.
+Verify output structure supports readability and reviewability without redundant nesting.
