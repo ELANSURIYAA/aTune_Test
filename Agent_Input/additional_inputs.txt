@@ -1,46 +1,78 @@
-Completeness Checks:
-Verify the output includes analysis of the Oracle implementation.
-Verify every required section from the orc-sf-kb knowledge base is present.
-Verify dependencies are explicitly identified.
-Verify migration impacts are explicitly identified.
-Verify metadata structure is preserved throughout the output.
-Verify the output follows enterprise formatting consistently.
-Verify API cost information is present at the end of the output.
-Verify all provided input content is addressed in the analysis.
-Verify section headings are present and consistently formatted.
-Verify no required KB-driven section is omitted.
-Verify the output is fully structured and not truncated.
-Verify dependency mappings include all referenced Oracle components.
-Verify migration impact analysis includes affected systems, integrations, or modules if referenced in the input.
-Verify all mandatory output sections defined by the KB are included.
-
-Accuracy Checks:
-Verify Oracle implementation details are correctly interpreted from the input.
-Verify dependencies identified in the output match the source implementation details.
-Verify migration impacts are directly supported by evidence from the input or KB.
+Completeness Checks
+Verify the output starts directly with the metadata header.
+Verify the metadata header appears exactly once.
+Verify the metadata contains:
+Author: Ascendion AAVA
+Created on: left empty
+Description: with a concise summary.
+Verify the conversion log section is present immediately after the metadata header.
+Verify all mandatory conversion log entries are included.
+Verify converted Snowflake SQL code is present after the conversion log.
+Verify separate output sessions are generated for each input file if multiple files are provided.
+Verify all Oracle queries/procedures from the source input are converted.
+Verify Oracle-specific functions are converted to Snowflake equivalents.
+Verify Oracle joins are converted to ANSI/Snowflake joins.
+Verify Oracle filtering logic is converted.
+Verify hierarchical queries are converted to recursive CTEs when present.
+Verify Oracle data types are converted to Snowflake-compatible types.
+Verify PL/SQL blocks are converted into Snowflake stored procedures when applicable.
+Verify inline comments for validation or unconverted logic are included when required.
+Verify CHECK REQUIRED comments are present where semantic validation is required.
+Verify UNCONVERTED LOGIC comments are included for unsupported deterministic conversions.
+Verify the output contains executable Snowflake SQL statements.
+Verify output contains proper indentation and formatting.
+Verify API cost appears at the end if required by constraints.
+Verify the script ends with Snowflake SQL code only.
+Verify no required input logic is omitted.
+Verify all mandatory sections appear in the required sequence:
+Metadata Header
+Conversion Log
+Snowflake SQL Code
+Accuracy Checks
+Verify Oracle functions (NVL, DECODE, SYSDATE, etc.) are correctly mapped to Snowflake equivalents.
+Verify Oracle joins preserve original join semantics.
+Verify WHERE clause logic matches the source query.
+Verify aggregation logic (SUM, COUNT, GROUP BY, etc.) is preserved correctly.
+Verify Oracle INSERT statements are correctly converted to Snowflake syntax.
+Verify Oracle UPDATE statements are correctly converted.
+Verify Oracle DELETE statements are correctly converted.
+Verify Oracle date and timestamp functions are accurately converted.
+Verify Oracle data types (VARCHAR2, NUMBER, etc.) are correctly mapped.
+Verify no Oracle syntax remains in the final output.
+Verify no SQL Server syntax appears in the final output.
+Verify only Snowflake SQL syntax is used.
+Verify table names and column names remain unchanged unless explicitly required.
+Verify schema prefixes are not added unnecessarily.
+Verify NULL handling logic preserves original semantics.
+Verify implicit Oracle casting is explicitly handled where needed.
+Verify recursive CTE conversion preserves hierarchical logic.
 Verify no undocumented assumptions are introduced.
-Verify metadata fields preserve original naming and hierarchy.
-Verify enterprise formatting is consistently applied without structural deviations.
-Verify KB guidance is correctly followed for each section.
-Verify API cost is placed only at the end of the output.
-Verify dependency relationships are logically correct.
-Verify migration impact statements do not contradict source data.
-Verify all terminology is consistent with Oracle migration context.
-Verify no hallucinated systems, integrations, APIs, or dependencies are added.
-Verify section content aligns with its corresponding heading.
-Verify deterministic formatting is maintained across repeated structures.
-Verify output values and mappings are internally consistent.
-
-Efficiency Checks:
-Verify no duplicate sections exist in the output.
-Verify dependency analysis is not repeated across multiple sections unnecessarily.
-Verify migration impact descriptions are concise and non-redundant.
-Verify metadata structures are reused consistently instead of reformatted differently across sections.
-Verify enterprise formatting is consistent without excessive verbosity.
-Verify repeated Oracle component descriptions are consolidated where applicable.
-Verify API cost is reported only once at the end.
-Verify tables or structured sections are not duplicated.
-Verify headings and formatting patterns remain uniform throughout the document.
-Verify no unnecessary explanatory text outside required enterprise reporting structure is included.
-Verify repeated KB guidance text is not copied into the final output unnecessarily.
-Verify output structure supports readability and reviewability without redundant nesting.
+Verify no fabricated joins, filters, business rules, or transformations are added.
+Verify unconvertible logic is not approximated.
+Verify unsupported logic is explicitly marked using the mandatory UNCONVERTED LOGIC comment style.
+Verify conversion log statements align with actual converted logic.
+Verify comments follow the required mandatory comment structure.
+Verify deterministic formatting is preserved consistently.
+Verify output contains no markdown syntax.
+Verify output contains no explanations, assumptions, troubleshooting, or validation reports outside allowed comments.
+Verify the output is not wrapped in quotes or code blocks.
+Verify the output begins immediately with the metadata header.
+Verify the output contains only executable Snowflake SQL and permitted Snowflake comments.
+Efficiency Checks
+Verify metadata header is not repeated.
+Verify conversion log appears only once per session.
+Verify duplicate SQL blocks are not present.
+Verify repeated validation comments are not unnecessarily duplicated.
+Verify SQL formatting is clean and readable without excessive spacing.
+Verify repeated Oracle-to-Snowflake mappings are not redundantly re-explained.
+Verify output does not contain redundant comments unrelated to execution.
+Verify Snowflake SQL statements are sequential and non-redundant.
+Verify no unnecessary nested logic is introduced.
+Verify conversion comments remain concise and relevant.
+Verify no duplicate joins, filters, or aggregation logic exist.
+Verify unnecessary intermediate transformations are not added.
+Verify only required comments are included.
+Verify output structure remains compact and enterprise-formatted.
+Verify repeated metadata or conversion overview sections are absent.
+Verify the final script remains predominantly executable Snowflake SQL.
+Verify unnecessary verbosity outside executable SQL is absent.
