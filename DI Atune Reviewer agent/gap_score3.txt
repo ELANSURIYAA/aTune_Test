@@ -1,0 +1,6 @@
+| Dimension     | Weight | Raw Score | Weighted Score | Notes                         |
+|---------------|--------|-----------|---------------|-------------------------------|
+| Completeness  | 40%    | 0 / 100   | 0.0 / 40      | 0 of 1 required items present  |
+| Accuracy      | 40%    | 0 / 100   | 0.0 / 40      | 0 of 0 present items correct   |
+| Efficiency    | 20%    | 0 / 100   | 0.0 / 20      | 0 observable optimization gaps |
+| TOTAL         | 100%   |           | 0.0 / 100     |                               |
