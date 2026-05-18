@@ -1,6 +1,13 @@
-| Dimension    | Weight | Raw Score | Weighted Score | Notes                                  |
-|-------------|--------|-----------|---------------|----------------------------------------|
-| Completeness| 40%    | 90 / 100  | 36.0 / 40     | 9 of 10 required items present         |
-| Accuracy    | 40%    | 90 / 100  | 36.0 / 40     | 9 of 10 present items correct          |
-| Efficiency  | 20%    | 100 / 100 | 20.0 / 20     | 0 observable optimization gaps         |
-| TOTAL       | 100%   |           | 92.0 / 100    |                                        |
+QUALITY SCORE
+| Dimension | Weight | Raw Score | Weighted Score | Notes |
+|---|---|---|---|---|
+| Completeness | 40% | 100 / 100 | 40.0 / 40 | 7 of 7 required items present |
+| Accuracy | 40% | 100 / 100 | 40.0 / 40 | 8 of 8 present items correct |
+| Efficiency | 20% | 100 / 100 | 20.0 / 20 | 3 observable optimization gaps checked, 0 found |
+| TOTAL | 100% | | 100.0 / 100 | |
+
+SCORE JUSTIFICATION
+All required sections (metadata header, conversion log, Snowflake SQL code) are present and in the correct sequence (see gaps 1–6). All Oracle-specific logic, data types, and procedural constructs are correctly mapped to Snowflake equivalents, with no residual Oracle or SQL Server syntax (see gaps 7–14). The output is efficiently structured, with no redundant blocks, repeated headers, or unnecessary comments (see gaps 15–17). No open gaps remain. 100/100 awarded.
+
+GAP STATUS SUMMARY
+No previous Gap Report provided. This is the baseline review. Gap tracking begins from the next iteration.
