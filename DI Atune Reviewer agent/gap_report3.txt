@@ -1,0 +1,3 @@
+| # | Dimension    | Category | Expected Output                                                                 | Actual Output | Gap Resolution Recommendation                                  | Previous Status | Current Status |
+|---|--------------|----------|--------------------------------------------------------------------------------|---------------|---------------------------------------------------------------|----------------|---------------|
+| 1 | Completeness | NP       | Output file must exist and contain converted Snowflake SQL with required sections| Absent        | Ensure the Executor Agent produces and saves the required output| NONE           | NEW           |
