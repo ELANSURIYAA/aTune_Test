@@ -24,7 +24,7 @@ STRICT OUTPUT RULES (MANDATORY):
 
 - Metadata must appear ONLY ONCE at the very top inside the "document" value.
 
-- "Created on:" must remain empty.
+- "Created on:" must be present with the colon followed by nothing (no space, no newline, no value).
 
 - Do NOT repeat metadata.
 
@@ -54,7 +54,7 @@ Author: Ascendion AAVA
 
 Created on:
 
-Description: <one-line description derived from the input asset - maximum 100 characters, must fit on a single line without wrapping>
+Description: <one-line description derived from the input asset - STRICT maximum 100 characters including spaces, must fit on a single line without wrapping. Count characters before output. If description exceeds 100 characters, shorten intelligently while preserving core meaning.>
 
 =============================================
 
@@ -233,44 +233,6 @@ ASCII LAYOUT RULES:
 
 - Keep the diagram visually aligned and easy to read.
 
-- Use ONLY actual processing steps explicitly found in the source code.
-
-- Do NOT invent or assume steps such as:
-
-  FULL LOAD, CDC, RETRY, ALERT, AGGREGATION, REPORTING, ORCHESTRATION, SCHEDULING
-
-  unless they are explicitly present in the code.
-
-- Normalize the process into a logical execution sequence even if the source code is unordered.
-
-- Do NOT preserve broken or reversed arrows from the source text unless the code logic explicitly requires it.
-
-BLOCK FORMAT RULES:
-
-- Every block MUST use EXACTLY this format:
-
-+------------------+
-| STEP NAME        |
-+------------------+
-
-- Do NOT add descriptions inside the boxes.
-- Use only short step names inside each box.
-- Keep step names concise, technical, and readable.
-- If a step name is too long, shorten it intelligently while preserving meaning.
-- Do NOT allow text to overflow outside the box.
-- Every box must use the exact same width.
-
-FLOW RULES:
-
-- Include "START" only if the code clearly has a process entry point.
-- Include "END" only if the code clearly has a final completion point.
-- Include "ERROR HANDLER" only if explicitly present in the code.
-- If Error Handler exists, place it in the execution sequence only if clearly supported by the source logic.
-- Keep the main path visually clean and easy to follow.
-- Do NOT place vertical transitions at the far left unless the flow genuinely drops from the left-most box.
-- When moving from one horizontal row to the next, the vertical connector MUST appear directly under the last executed box in the row.
-- For reverse-direction rows, ensure the next continuation visually follows the snake layout correctly.
-
 MANDATORY OUTPUT SHAPE:
 
 - Horizontal rows MUST look like this:
@@ -368,6 +330,8 @@ Rules:
 
 # 6. Sensitive and Privacy Data Assessment
 
+This section MUST begin with the header: # 6. Sensitive and Privacy Data Assessment
+
 Rules:
 
 - Include ONLY fields explicitly present in the source.
@@ -397,21 +361,20 @@ No sensitive data found
 
 # 7. Key Outputs
 
-Rules:
-- This section must contain ONLY bullet points.
-- Include ONLY the final, most critical business outputs directly produced by the implementation.
-- Focus on:
+This section must contain ONLY bullet points.
+Include ONLY the final, most critical business outputs directly produced by the implementation.
+Focus on:
   - Final target tables that represent completed business data products
   - Final output views used for reporting or downstream consumption
-  - Final inserted / updated / merged business data that represents the end state
+  - Final inserted/updated/merged business data that represents the end state
   - Critical business data products that are the ultimate goal of the process
-- EXCLUDE:
+EXCLUDE:
   - Intermediate staging tables
   - Temporary processing tables
   - Technical audit logs (unless they are a primary business output)
   - Every table touched during processing (only include final destinations)
-- If not explicitly present, write:
-  - Not explicitly present in source.
+If not explicitly present, write:
+  Not explicitly present in source.
 
 # 8. API Cost Calculations
 
@@ -421,8 +384,7 @@ Rules:
 - Include full decimal precision up to 4 decimal places.
 - Format EXACTLY as:
 API cost for this call: X.XXXX USD
-- If the calculated API cost mathematically rounds to 0.0000, write exactly: 'API cost for this call: 0.0000 USD'
-- If API cost cannot be calculated or is not available, write exactly: 'API cost calculation: Not explicitly present in source.'
+- If the calculated API cost mathematically rounds to 0.0000, write exactly: 'API cost for this call: 0.0000 USD' AND include the calculation method or source that resulted in zero cost. If no calculation is possible, write exactly: 'API cost calculation: Not explicitly present in source.'
 - Always show the calculation method or source when providing a non-zero cost.
 
 INPUT:
