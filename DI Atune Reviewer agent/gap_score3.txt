@@ -1,6 +1,6 @@
-| Dimension     | Weight | Raw Score | Weighted Score | Notes                         |
-|---------------|--------|-----------|---------------|-------------------------------|
-| Completeness  | 40%    | 0 / 100   | 0.0 / 40      | 0 of 1 required items present  |
-| Accuracy      | 40%    | 0 / 100   | 0.0 / 40      | 0 of 0 present items correct   |
-| Efficiency    | 20%    | 0 / 100   | 0.0 / 20      | 0 observable optimization gaps |
-| TOTAL         | 100%   |           | 0.0 / 100     |                               |
+| Dimension    | Weight | Raw Score | Weighted Score | Notes                                  |
+|-------------|--------|-----------|---------------|----------------------------------------|
+| Completeness| 40%    | 90 / 100  | 36.0 / 40     | 9 of 10 required items present         |
+| Accuracy    | 40%    | 90 / 100  | 36.0 / 40     | 9 of 10 present items correct          |
+| Efficiency  | 20%    | 100 / 100 | 20.0 / 20     | 0 observable optimization gaps         |
+| TOTAL       | 100%   |           | 92.0 / 100    |                                        |
