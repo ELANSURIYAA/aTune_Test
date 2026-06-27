@@ -1,0 +1,13 @@
+Gap Reference	Change Type	Section Updated	Status
+G-01	A	Function and Syntax Conversion	APPLIED
+G-02	A	Output Optimization	APPLIED
+G-03	A	Output Optimization	APPLIED
+G-04	D+R	ADDITIONAL MANDATORY RULES > No Residual Syntax Rule	APPLIED
+G-05	D+R	Inline Comment Standards (MANDATORY STYLE) - Section B	APPLIED
+G-06	A	Output Optimization	APPLIED
+G-07	A	Instructions (General section)	APPLIED
+G-08	A	Instructions (General section)	APPLIED
+G-09	A	Validation Checklist (Internal Use Only — Do Not Print)	APPLIED
+G-10	A	Validation Checklist (Internal Use Only — Do Not Print)	APPLIED
+G-11	D+R	Output Optimization	APPLIED
+G-12	A	Function and Syntax Conversion	APPLIED
